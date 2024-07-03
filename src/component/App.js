@@ -9,17 +9,17 @@ import Detail from "./Detail/Detail";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <div style={{minHeight : '100vh'}}>
-        <Router>
+      <Navbar />
+      <div style={{ minHeight: '100vh' }}>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
-            <Route path="/" element ={<Landingpage/>} />
-            <Route path='/movie/:movieId' element={<Detail/>}/>
-            <Route path="/items" element ={<Items/>} />
+            <Route path="/" element={<Landingpage />} />
+            <Route path='/movie/:movieId' element={<Detail />} />
+            <Route path="/items" element={<Items />} />
           </Routes>
         </Router>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
