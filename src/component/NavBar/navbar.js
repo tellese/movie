@@ -1,7 +1,8 @@
 import { Layout, Menu } from 'antd';
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-const {Header} = Layout;
+const { Header } = Layout;
 
 // const items1 = ['Home'].map((key) => ({
 //  key : 'Home',
@@ -16,8 +17,8 @@ const {Header} = Layout;
 //  }));
 
 const items = [{
-  key : 'Home',
-  label : (<a href='/'> Home</a>)
+  key: 'Home',
+  label: (<Link to='/'> Home</Link>)
 }]
 
 const Navbar = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
         }}
       >
         <div className="demo-logo" />
-          <Menu
+        <Menu
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={['Home']}
@@ -39,7 +40,7 @@ const Navbar = () => {
             flex: 1,
             minWidth: 0,
           }}
-          />
+        />
       </Header>
     </Layout>
   );

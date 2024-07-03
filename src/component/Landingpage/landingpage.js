@@ -11,7 +11,7 @@ function Landingpage() {
   const [movies, setmovies] = useState([]);
   const [MainmovieImage, setMovieImage] = useState(null);
 
-  const [Currentpage,setCurrentpage] = useState(0);
+  const [Currentpage, setCurrentpage] = useState(0);
 
   useEffect(() => {
     const page = 1
@@ -23,9 +23,9 @@ function Landingpage() {
   //   fetchMovies(2)
   // } >> 기존 코드
 
-  const loadMoreItems =() =>{
+  const loadMoreItems = () => {
     console.log('더보기 누름!')
-    fetchMovies(Currentpage +1)
+    fetchMovies(Currentpage + 1)
   }
 
   return (
@@ -40,8 +40,8 @@ function Landingpage() {
         }
 
         {/* 다음 버튼*/}
-        <div style={{width:'85%',textAlign: 'right', marginTop: '40px'}}>
-          <button onClick={()=>navigate(1)}>다음</button>
+        <div style={{ width: '85%', textAlign: 'right', marginTop: '40px' }}>
+          <button onClick={() => navigate(1)}>다음</button>
         </div>
 
         <div style={{ width: '85%', margin: '1rem auto' }}>
@@ -57,7 +57,7 @@ function Landingpage() {
                     landingpage //컴포넌트를 사용하면서 속성을 사용할때 키만 있을 경우 해당이 되는 속성의 값이 true로 고정된다
                     path={`${IMAGE_BASE_URL}w400${movie.poster_path}`}
                     title={movie.title}
-                    movieId ={movie.id}
+                    movieId={movie.id}
                   />
                 </React.Fragment>
               );

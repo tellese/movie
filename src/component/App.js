@@ -8,19 +8,19 @@ import Detail from "./Detail/Detail";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div style={{ minHeight: '100vh' }}>
-        <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className="App">
+        <Navbar />
+        <div style={{ minHeight: '100vh' }}>
           <Routes>
             <Route path="/" element={<Landingpage />} />
-            <Route path='/movie/:movieId' element={<Detail />} />
+            <Route path='/detail/:movieId' element={<Detail />} />
             <Route path="/items" element={<Items />} />
           </Routes>
-        </Router>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 
